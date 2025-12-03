@@ -14,7 +14,7 @@ for (let i = 0; i < inputs.length; i++) {
 
     if (s.length % 2 !== 0) continue;
 
-    mid = Math.floor(s.length / 2);
+    mid = s.length / 2;
     left = s.slice(0, mid);
     right = s.slice(mid);
     if (left === right) {
