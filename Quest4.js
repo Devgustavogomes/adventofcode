@@ -1,5 +1,6 @@
 const raw = document.querySelector("pre").textContent;
 const inputs = raw.split(",");
+console.log(inputs);
 const invalidIds = [];
 let s, mid, left, right;
 
