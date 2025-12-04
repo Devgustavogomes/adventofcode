@@ -9,17 +9,17 @@ const joltage = [];
 for (let i = 0; i < inputs.length - 1; i++) {
   const tempJoltage = [];
   bank = inputs[i];
-  firstBattery = Number(bank[0]);
+  firstBattery = bank[0];
   actuallyBatteryIndex = 0;
 
   for (let k = 1; k < bank.length - 11; k++) {
-    if (Number(bank[k]) > firstBattery) {
-      firstBattery = Number(bank[k]);
+    if (bank[k] > firstBattery) {
+      firstBattery = bank[k];
       actuallyBatteryIndex = k;
     }
   }
 
-  tempJoltage.push(String(firstBattery));
+  tempJoltage.push(firstBattery);
 
   do {
     partOfBank = bank.slice(actuallyBatteryIndex + 1);
@@ -28,6 +28,7 @@ for (let i = 0; i < inputs.length - 1; i++) {
     lastBattery = partOfBank[0];
 
     actuallyBatteryIndex = 0;
+
     for (let k = 1; k < partOfBank.length - (11 - tempJoltage.length); k++) {
       if (partOfBank[k] > lastBattery) {
         lastBattery = partOfBank[k];
