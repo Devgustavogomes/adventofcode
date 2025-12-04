@@ -1,8 +1,11 @@
 const raw = document.querySelector("pre").textContent;
 const inputs = raw.split("\n");
-let bank, firstBattery, finalBattery, actuallyBatteryIndex, partOfBank;
-
-let lastBattery = 0;
+let bank,
+  firstBattery,
+  lastBattery,
+  finalBattery,
+  actuallyBatteryIndex,
+  partOfBank;
 
 const joltage = [];
 
