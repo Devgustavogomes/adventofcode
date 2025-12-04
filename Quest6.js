@@ -1,5 +1,6 @@
 const raw = document.querySelector("pre").textContent;
 const inputs = raw.split("\n");
+
 let bank,
   firstBattery,
   lastBattery,
@@ -26,6 +27,7 @@ for (let i = 0; i < inputs.length - 1; i++) {
 
   do {
     partOfBank = bank.slice(actuallyBatteryIndex + 1);
+
     bank = partOfBank;
 
     lastBattery = partOfBank[0];
@@ -43,6 +45,7 @@ for (let i = 0; i < inputs.length - 1; i++) {
   } while (tempJoltage.length < 12);
 
   const result = tempJoltage.join("");
+
   joltage.push(Number(result));
 }
 
